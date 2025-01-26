@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Follower Goal</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #333; color: white; }
+        .goal-container { position: relative; width: 300px; height: 100px; margin: 50px auto; background-color: #444; border-radius: 10px; }
+        .follower-count { font-size: 2em; }
+        .progress-bar { position: absolute; bottom: 0; left: 0; height: 20px; background-color: #76c7c0; border-radius: 0 0 10px 10px; }
+    </style>
+</head>
+<body>
+    <div class="goal-container">
+        <div class="follower-count">Followers: 50/100</div>
+        <div class="progress-bar" style="width: 50%;"></div>
+    </div>
+    <script>
+        // JavaScript to animate progress bar (just an example)
+        let progress = 50; // current followers
+        let goal = 100; // goal followers
+        document.querySelector('.progress-bar').style.width = (progress / goal * 100) + '%';
+    </script>
+</body>
+</html>

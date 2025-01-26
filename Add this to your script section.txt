@@ -1,0 +1,10 @@
+// Add this to your script section
+const socket = new WebSocket('wss://your-websocket-url');
+
+socket.onmessage = function(event) {
+    const data = JSON.parse(event.data);
+    const progress = data.followers;
+    const goal = 100; // goal followers
+    document.querySelector('.progress-bar').style.width = (progress / goal * 100) + '%';
+    document.querySelector('.follower-count').textContent = `Followers: ${progress}/100`;
+};
